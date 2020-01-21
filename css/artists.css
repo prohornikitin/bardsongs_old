@@ -1,0 +1,26 @@
+article {
+	margin: 10px 200px 10px 200px;
+	display: block;
+	padding: 5px;
+	background: #d9dabb;
+	border-radius: 5px;
+}
+
+
+article > a {
+	font-size: 1.5rem;
+	padding: 10px;
+}
+
+article > img {
+	width: 10%;
+	border-radius: 5px;
+}
+
+article > * {
+	display: inline;
+	vertical-align: middle;
+}
+
+
+

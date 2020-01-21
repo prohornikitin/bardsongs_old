@@ -1,0 +1,62 @@
+@import url("/css/buttons.css");
+
+body {
+	color: #FFFFFF;
+}
+
+h1{
+	text-align: center;
+	font-size: 2.8rem;
+}
+
+
+hgroup h4{
+	margin-top: 10px;
+	font-size: 1.1rem;
+	text-align: center;
+}
+
+a{
+	font-weight: bold;
+	color: #2a5885;
+	text-decoration: none;
+}
+
+article {
+	display: block;
+	padding: 5px;
+	background: #d9dabb;
+	border-radius: 5px;
+}
+
+#contentHolder {
+	font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial";
+	background-color: rgba(206, 173, 120, 0.6);
+	border-radius:10px;
+	margin: 0 auto;
+	width: 70%;
+	min-width: 1000px;
+	min-height: 800px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+
+
+#backgroundImageHolder {
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: url(/images/background.jpg) no-repeat;
+	z-index: -1;
+	background-size: cover;
+}
+
+footer {
+	text-align: center;
+	padding-bottom: 1px;
+}
