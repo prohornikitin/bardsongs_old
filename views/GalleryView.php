@@ -1,6 +1,6 @@
 <?php
-require_once 'Models/ViewedSourceData.php';
-require_once 'Views/iView.php';
+require_once 'models/ViewedSourceData.php';
+require_once 'views/IView.php';
 
 class GalleryView implements iView
 {
@@ -25,25 +25,20 @@ class GalleryView implements iView
     {
         $images = $this->viewed_source->getImages();
         $file = $this->viewed_source->getCurrentFile();
-    	$special_css = 'gallery_viewer.css';
-        $content_view = 'imageViewer.php';
+    	$special_css = 'GalleryViewer.css';
+        $content_view = 'ImageViewer.php';
         $disabledNavButtonId = 'gallery';
-        $scripts_include = '<script src="js/image_viewer.js"></script>';
-        require 'Views/page_template.php';
+        $scripts_include = '<script src="js/ImageViewer.js"></script>';
+        require 'views/PageTemplate.php';
     }
 
     private function generateDirectoryViewer()
     {
         $subdirectories = $this->viewed_source->getSubdirectories();
         $images = $this->viewed_source->getImages();
-    	$special_css = 'gallery.css';
-        $content_view = 'directoryViewer.php';
+    	$special_css = 'Gallery.css';
+        $content_view = 'DirectoryViewer.php';
         $disabledNavButtonId = 'gallery';
-        require 'Views/page_template.php';
-    }
-
-    function __destruct()
-    {
-
+        require 'views/PageTemplate.php';
     }
 }

@@ -1,6 +1,6 @@
 <?php
-require 'Models/NewsData.php';
-require 'Views/MainView.php';
+require 'models/NewsData.php';
+require 'views/MainView.php';
 
 class MainController
 {

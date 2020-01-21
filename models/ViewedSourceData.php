@@ -1,5 +1,5 @@
 <?php
-require 'tools/workingWithFileNames.php';
+require 'tools/WorkingWithFileNames.php';
 
 class ViewedSourceData
 {

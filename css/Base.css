@@ -1,4 +1,4 @@
-@import url("/css/buttons.css");
+@import url("/css/Buttons.css");
 
 body {
 	color: #FFFFFF;
@@ -51,7 +51,7 @@ article {
 	position: fixed;
 	top: 0;
 	left: 0;
-	background: url(/images/background.jpg) no-repeat;
+	background: url(/images/Background.jpg) no-repeat;
 	z-index: -1;
 	background-size: cover;
 }

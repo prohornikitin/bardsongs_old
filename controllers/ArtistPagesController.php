@@ -1,7 +1,7 @@
 <?php
-require_once 'Views/iView.php';
-require_once 'Models/ArtistPagesData.php';
-require_once 'Views/ArtistPagesView.php';
+require_once 'views/IView.php';
+require_once 'models/ArtistPagesData.php';
+require_once 'views/ArtistPagesView.php';
 
 
 class ArtistPagesController

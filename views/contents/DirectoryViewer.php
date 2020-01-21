@@ -1,6 +1,6 @@
 <main>
     <button id='back' onclick='javascript:history.back()'>
-           <img src='images/backButton.png'>
+           <img src='images/BackButton.png'>
             Назад
     </button>
     <?php
@@ -21,7 +21,7 @@
         {
             echo '<figure>';
             echo '  <a href="?dir=', $directoryPath, '/">';
-            echo '    <img src="/images/folder.png">';
+            echo '    <img src="/images/Folder.png">';
             echo '  </a>';
             echo '  <figcaption>';
             echo      basename($directoryPath);

@@ -1,5 +1,5 @@
 <?php
-require_once 'Views/iView.php';
+require_once 'views/IView.php';
 
 class MainView implements iView
 {
@@ -12,9 +12,9 @@ class MainView implements iView
     public function generate()
     {
     	$news = $this->news;
-        $special_css = 'main.css';
-        $content_view = 'main.php';
+        $special_css = 'Main.css';
+        $content_view = 'Main.php';
         $disabledNavButtonId = 'main';
-        include 'Views/page_template.php';
+        include 'views/PageTemplate.php';
     }
 }

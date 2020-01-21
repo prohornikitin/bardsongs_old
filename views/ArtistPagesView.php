@@ -1,6 +1,6 @@
 <?php
-require_once 'Views/iView.php';
-require_once 'Models/ArtistPagesData.php';
+require_once 'views/IView.php';
+require_once 'models/ArtistPagesData.php';
 
 class ArtistPagesView implements iView
 {
@@ -14,10 +14,10 @@ class ArtistPagesView implements iView
     public function generate()
     {
     	$pages = $this->artist_pages->get();
-    	$special_css = 'artists.css';
-        $content_view = 'artistPages.php';
+    	$special_css = 'Artists.css';
+        $content_view = 'ArtistPages.php';
         $disabledNavButtonId = 'artists';
-        require 'Views/page_template.php';
+        require 'views/PageTemplate.php';
     }
 
     function __destruct()

@@ -1,7 +1,7 @@
 <?php
-require_once 'Models/LoginData.php';
-require_once 'Views/LoggedInForumView.php';
-require_once 'Views/LoginView.php';
+require_once 'models/LoginData.php';
+require_once 'views/LoggedInForumView.php';
+require_once 'views/LoginView.php';
 
 class LoginController
 {

@@ -1,22 +1,22 @@
 <aside>
 	<h3>Традиционные ежегодные мероприятия:</h3>
-	<a href='regular_events/new_year.php'>
+	<a href='regularEvents/NewYear.php'>
 		<video disable autoplay loop muted>
-			<source src='video/christmas_tree.webm'>
+			<source src='video/ChristmasTree.webm'>
 		</video>
 		<span>Новый год</span>
 	</a>
-	<a href='regular_events/volodarka.php'>
-		<img src='images/we_are_bugs.jpg'>
+	<a href='regularEvents/volodarka.php'>
+		<img src='images/WeAreBugs.jpg'>
 		<span>Володарка</span>
 	</a>
-	<a href='regular_events/festival.php'>
-		<img src='images/ksp_emblem.jpg'>
+	<a href='regularEvents/Festival.php'>
+		<img src='images/KspEmblem.jpg'>
 		<span>Фестиваль</span>
 	</a>
-	<a href='regular_events/rally.php'>
+	<a href='regularEvents/Rally.php'>
 		<video autoplay loop muted>
-			<source src='video/fire.webm'>
+			<source src='video/Fire.webm'>
 		</video>
 		<span>Слёт</span>
 	</a>

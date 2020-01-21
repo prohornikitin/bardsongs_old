@@ -1,6 +1,6 @@
 <?php
-require 'Models/ViewedSourceData.php';
-require 'Views/GalleryView.php';
+require 'models/ViewedSourceData.php';
+require 'views/GalleryView.php';
 
 class GalleryController
 {

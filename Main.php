@@ -1,5 +1,5 @@
 <?php
-    require_once 'Controllers/MainController.php';
+    require_once 'controllers/MainController.php';
 
     $controller = new MainController();
     $controller->doIndexAction();

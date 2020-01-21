@@ -1,5 +1,5 @@
 <?php
-require_once 'Views/iView.php';
+require_once 'views/IView.php';
 
 class LoggedInForumView implements iView
 {
@@ -13,9 +13,9 @@ class LoggedInForumView implements iView
 	public function generate()
 	{
 		ob_clean();
-		$special_css = 'forum.css';
+		$special_css = 'Forum.css';
 		$disabledNavButtonId = 'forum';
-		$content_view = 'loggedInForum.php';
-		require "Views/page_template.php";
+		$content_view = 'LoggedInForum.php';
+		require "views/PageTemplate.php";
 	}
 }
