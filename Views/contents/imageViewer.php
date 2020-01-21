@@ -12,10 +12,12 @@
 <script type="text/javascript">
     <?php
         require_once 'tools/workingWithFileNames.php';
+        require_once 'tools/setJsVariable.php';
+
         $file = dirname($images[0]) . '/' . $file;
         $currentFileIndex = array_search($file, $images);
-        echo 'var currentFileIndex=', json_encode($currentFileIndex), ";\n";
-        echo 'var fileNames=', json_encode($images), ";\n";
+        setJsVariable('currentFileIndex', $currentFileIndex);
+        setJsVariable('fileNames', $images);
     ?>
 </script>
 <script src="/js/image_viewer.js"></script>
