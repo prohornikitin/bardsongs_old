@@ -2,7 +2,7 @@
 require_once 'models/ViewedSourceData.php';
 require_once 'views/IView.php';
 
-class GalleryView implements iView
+class GalleryView implements IView
 {
     private ViewedSourceData $viewed_source;
 

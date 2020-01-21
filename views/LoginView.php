@@ -1,7 +1,7 @@
 <?php
 include_once 'views/IView.php';
 
-class LoginView implements iView
+class LoginView implements IView
 {
     public function generate()
     {

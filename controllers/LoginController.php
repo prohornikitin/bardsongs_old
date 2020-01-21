@@ -6,7 +6,7 @@ require_once 'views/LoginView.php';
 class LoginController
 {
     private LoginData $login_data;
-    private iView $view;
+    private IView $view;
 
     public function __construct()
     {
@@ -72,7 +72,6 @@ class LoginController
         if(isset($_SESSION['email']) and isset($_SESSION['password'])) {
             $this->login_data->setFrom($_SESSION);
         } else {
-            
             $this->doIncorrectDataAction();
         }
     }

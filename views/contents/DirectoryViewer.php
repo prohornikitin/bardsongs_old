@@ -4,6 +4,8 @@
             Назад
     </button>
     <?php
+        require 'tools/WorkingWithFileNames.php';
+        
         function echoImage(string $imagePath) : void
         {
             echo '<figure>';
@@ -27,11 +29,6 @@
             echo      basename($directoryPath);
             echo '  </figcaption>';
             echo '</figure>';
-        }
-
-        function deleteExstension(string $fileName) : string{
-            $withoutExtension = substr($fileName, 0, strrpos($fileName, '.'));
-            return $withoutExtension;
         }
 
         foreach ($subdirectories as $directory) {

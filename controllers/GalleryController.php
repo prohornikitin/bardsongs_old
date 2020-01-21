@@ -4,7 +4,7 @@ require 'views/GalleryView.php';
 
 class GalleryController
 {
-    private iView $view;
+    private IView $view;
     private ViewedSourceData $viewed_source;
 
     function __construct()
@@ -15,11 +15,11 @@ class GalleryController
 
     public function doIndexAction()
     {
-    	$this->setViewedSourceData();
+    	$this->setViewedSource();
         $this->view->generate();
     }
 
-    private function setViewedSourceData()
+    private function setViewedSource()
     {
     	$directory = $this->getDirectory();
     	$file = $this->getFile();

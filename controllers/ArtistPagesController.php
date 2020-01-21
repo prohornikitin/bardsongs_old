@@ -6,14 +6,13 @@ require_once 'views/ArtistPagesView.php';
 
 class ArtistPagesController
 {
-	private ArtistPagesData $artistPagesData;
-	private iView $view;
-
-
+	private ArtistPagesData $pages;
+	private IView $view;
+	
 	function __construct()
 	{
-		$this->artistPagesData = new ArtistPagesData();
-		$this->view = new ArtistPagesView($this->artistPagesData);
+		$this->pages = new ArtistPagesData();
+		$this->view = new ArtistPagesView($this->pages);
 	}
 
 	public function doIndexAction() : void

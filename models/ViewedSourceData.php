@@ -5,31 +5,49 @@ class ViewedSourceData
 {
 	private String $directory;
 	private $file;
+	private array $subdirectories;
+	private array $images;
 
 	public function set(String $directory, $file)
 	{
 		$this->directory = $directory;
 		$this->file = $file;
+		$this->subdirectories = array();
+		$this->images = array();
 	}
 
 	public function getSubdirectories()
 	{
-		$directories = array();
-		$fileNames = scandir($this->directory);
-        foreach ($fileNames as $fileName) {
-            if(!isHidden($fileName )&& isDirectory($fileName)) {
-                array_push($directories, $this->directory . $fileName);
-            }
-        }
-        return $directories;
+		if(count($this->subdirectories) == 0) {
+			$this->loadSubDirectories();
+	    }
+        return $this->subdirectories;
 	}
 
 	public function getImages()
 	{
-		$images = array();
-		$fileNames = scandir($this->directory);
-        foreach ($fileNames as $fileName) {
-            if(!isHidden($fileName) && isImage($fileName)) {
+		if(count($this->images) == 0) {
+			$this->loadImages();
+        }
+        return $this->images;
+	}
+
+
+	private function loadSubDirectories()
+	{
+		$files = scandir($this->directory);
+        foreach ($files as $file) {
+            if(!isHidden($file ) && isDirectory($file)) {
+                array_push($this->subdirectories, $this->directory . $file);
+            }
+        }
+	}
+
+	private function loadImages()
+	{
+		$files = scandir($this->directory);
+        foreach ($files as $file) {
+            if(!isHidden($file) && isImage($file)) {
                 array_push($images, $this->directory . $fileName);
             }
         }
@@ -38,6 +56,6 @@ class ViewedSourceData
 
 	public function getCurrentFile()
 	{
-		return $this->file;
+		return $this->directory . $this->file;
 	}
 }

@@ -2,7 +2,7 @@
 require_once 'views/IView.php';
 require_once 'models/ArtistPagesData.php';
 
-class ArtistPagesView implements iView
+class ArtistPagesView implements IView
 {
 	private ArtistPagesData $artist_pages;
 

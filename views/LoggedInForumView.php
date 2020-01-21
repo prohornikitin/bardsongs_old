@@ -1,7 +1,7 @@
 <?php
 require_once 'views/IView.php';
 
-class LoggedInForumView implements iView
+class LoggedInForumView implements IView
 {
 	private $login_data;
 	

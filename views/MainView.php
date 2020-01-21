@@ -1,7 +1,7 @@
 <?php
 require_once 'views/IView.php';
 
-class MainView implements iView
+class MainView implements IView
 {
 	private array $news;
 

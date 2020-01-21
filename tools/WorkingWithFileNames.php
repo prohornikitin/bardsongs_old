@@ -1,25 +1,22 @@
 <?php
-    function deleteNonImages(array &$fileNames) : void{
-        for($i=0; $i<count($fileNames); ++$i) {
-            if(!isImage($fileNames[$i])) {
-                array_splice($fileNames, $i, 1);
-                --$i;
-            }
-        }
-    }    
+    function deleteExstension(string $file) : string{
+        $withoutExtension = substr($file, 0, strrpos($file, '.'));
+        return $withoutExtension;
+    }
 
-    function isImage(string $fileName) : bool {
-        $fileExtension = strrchr($fileName, '.');
+    function isImage(string $file) : bool {
+        $extension = strrchr($fileName, '.');
         $imageExtensions = array(".png", ".jpg");
-        return ($fileExtension !== null) &&
-             (array_search($fileExtension, $imageExtensions) !== false);
+        return ($extension !== null) && 
+            (array_search($fileExtension, $imageExtensions) !== false);
     }
 
-    function isDirectory(string $fileName) : bool {
-        return ((strrchr($fileName, ".") === false) || (strrchr($fileName, ".") == $fileName));
+    function isDirectory(string $file) : bool {
+        return ((strrchr($fileName, ".") === false) || 
+            (strrchr($fileName, ".") == $fileName));
     }
 
-    function isHidden(string $fileName) : bool {
+    function isHidden(string $file) : bool {
         return (strchr($fileName, ".") == $fileName);
     }
 ?>

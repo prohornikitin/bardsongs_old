@@ -29,11 +29,15 @@ class LoginData
         return ($user == null);
     }
 
+    private function getDefaultName()
+    {
+        return substr($this->email, 0, strrpos($this->email, '@'));
+    }
+
     public function signUpNewUser() : bool
     {
-        $default_display_name = substr($this->email, 0, strrpos($this->email, '@'));
         $variables = '(email, password, display_name)';
-        $values = "('{$this->email}', '{$this->password}', '{$default_display_name}')";
+        $values = "('{$this->email}', '{$this->password}', '{$this->getDefaultName()}')";
         return $this->mysqli->query("INSERT INTO USERS {$variables} VALUES {$values};");
     }
 
