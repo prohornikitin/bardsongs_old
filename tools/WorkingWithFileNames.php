@@ -5,18 +5,18 @@
     }
 
     function isImage(string $file) : bool {
-        $extension = strrchr($fileName, '.');
+        $extension = strrchr($file, '.');
         $imageExtensions = array(".png", ".jpg");
         return ($extension !== null) && 
-            (array_search($fileExtension, $imageExtensions) !== false);
+            (array_search($extension, $imageExtensions) !== false);
     }
 
     function isDirectory(string $file) : bool {
-        return ((strrchr($fileName, ".") === false) || 
-            (strrchr($fileName, ".") == $fileName));
+        return ((strrchr($file, ".") === false) || 
+            (strrchr($file, ".") == $file));
     }
 
     function isHidden(string $file) : bool {
-        return (strchr($fileName, ".") == $fileName);
+        return (strchr($file, ".") == $file);
     }
 ?>

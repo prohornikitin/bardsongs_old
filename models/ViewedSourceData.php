@@ -1,5 +1,5 @@
 <?php
-require 'tools/WorkingWithFileNames.php';
+require_once 'tools/WorkingWithFileNames.php';
 
 class ViewedSourceData
 {
@@ -18,22 +18,22 @@ class ViewedSourceData
 
 	public function getSubdirectories()
 	{
-		if(count($this->subdirectories) == 0) {
-			$this->loadSubDirectories();
+		if(count($this->subdirectories) === 0) {
+			$this->loadSubdirectories();
 	    }
         return $this->subdirectories;
 	}
 
 	public function getImages()
 	{
-		if(count($this->images) == 0) {
+		if(count($this->images) === 0) {
 			$this->loadImages();
         }
         return $this->images;
 	}
 
 
-	private function loadSubDirectories()
+	private function loadSubdirectories() : void
 	{
 		$files = scandir($this->directory);
         foreach ($files as $file) {
@@ -48,14 +48,13 @@ class ViewedSourceData
 		$files = scandir($this->directory);
         foreach ($files as $file) {
             if(!isHidden($file) && isImage($file)) {
-                array_push($images, $this->directory . $fileName);
+                array_push($this->images, $this->directory . $file);
             }
         }
-        return $images;
 	}
 
 	public function getCurrentFile()
 	{
-		return $this->directory . $this->file;
+		return $this->file;
 	}
 }

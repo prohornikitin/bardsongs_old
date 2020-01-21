@@ -4,7 +4,7 @@
             Назад
     </button>
     <?php
-        require 'tools/WorkingWithFileNames.php';
+        require_once 'tools/WorkingWithFileNames.php';
         
         function echoImage(string $imagePath) : void
         {
@@ -31,12 +31,13 @@
             echo '</figure>';
         }
 
+        
         foreach ($subdirectories as $directory) {
             echoDirectory($directory);
         }
+
         foreach ($images as $image) {
             echoImage($image);
         }
-
     ?>
 </main>

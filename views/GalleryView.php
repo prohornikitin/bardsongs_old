@@ -28,7 +28,6 @@ class GalleryView implements IView
     	$special_css = 'GalleryViewer.css';
         $content_view = 'ImageViewer.php';
         $disabledNavButtonId = 'gallery';
-        $scripts_include = '<script src="js/ImageViewer.js"></script>';
         require 'views/PageTemplate.php';
     }
 
