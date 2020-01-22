@@ -42,9 +42,7 @@ aside a{
 
 article {
 	margin-top: 10px;
-	display: block;
-	background: #d9dabb;
-	border-radius: 5px;
+	padding: 5px;
 }
 
 article > .news_headers, .news_text {
