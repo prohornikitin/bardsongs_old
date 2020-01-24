@@ -28,7 +28,10 @@
 	        foreach ($news as $news_item) {
                 echo '<article>';
                 echo ' <p class="news_headers">', $news_item->title, '</p>';
-                echo ' <img hidden class="news_image" src="', $news_item->img_url,  '"></img>';
+                if($news_item->img_url == null) {
+                	echo ' <img hidden class="news_image" alt="no image"></img>';
+                }
+                echo ' <img hidden class="news_image" alt="image" src="', $news_item->img_url,  '"></img>';
                 echo ' <p hidden class="news_text">', $news_item->text, '</p>';
                 echo ' <button class="show_buttons">Показать</button>';
                 echo '</article>';

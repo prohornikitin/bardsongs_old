@@ -17,13 +17,19 @@
 	        if ($result) {
 	            $maxId = $result->fetch_row()[0];
 	        }
-	        return $maxId;
+
+            if($maxId !== null) {
+	           return $maxId;
+            } else {
+                return 0;
+            }
 	    }
 
         private function loadData() : void
         {
             $this->news = array();
             $maxId = $this->getMaxNewsId();
+            echo $maxId;
             for($i=0; $i<6 && $i<$maxId; ++$i) {
                 $result = $this->mysqli->query('SELECT * FROM NEWS WHERE ID=' . ($maxId-$i));
                 if($result) {

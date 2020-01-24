@@ -10,11 +10,12 @@ function toggleNewsText(num) {
 
 function toggleNewsImage(num) {
 	let element = document.getElementsByClassName("news_image")[num];
-	
-	if(element.hidden == "") {
-		element.hidden = "true";
-	} else {
-		element.hidden = "";
+	if(element.alt != "no image") {
+		if(element.hidden == "") {
+			element.hidden = "true";
+		} else {
+			element.hidden = "";
+		}
 	}
 }
 
