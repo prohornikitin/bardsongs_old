@@ -5,6 +5,7 @@ class LoginView implements IView
 {
     public function generate()
     {
+        ob_clean();
         $special_css = 'ControlPanel.css';
         $content_view = 'Login.php';
         $disabledNavButtonId = 'forum';
@@ -13,6 +14,7 @@ class LoginView implements IView
 
     public function generateWithError($error_text)
     {
+        ob_clean();
         $special_css = 'ControlPanel.css';
         $content_view = 'Login.php';
         $disabledNavButtonId = 'forum';

@@ -13,7 +13,7 @@
     <body>
         <div id="backgroundImageHolder"></div>
         <h1>Клуб самодеятельной песни КСП МИФИ</h1>
-        <div id="contentHolder">
+        <div class="contentHolder">
             <nav>
                 <button id='main' onclick='window.location.href="/Main.php"'>Главная</button>
                 <button id='forum' onclick='window.location.href="/Forum.php"'>Форум</button>
@@ -23,6 +23,7 @@
             <?php 
                 require "views/contents/{$content_view}";
             ?>
+            <h3 style='color: white;'>День Рождения клуба - 18 ноября 1964 года.</h3>
         </div>
     </body>
     <?php 

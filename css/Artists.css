@@ -1,7 +1,9 @@
 article {
-	margin: 10px 200px 10px 200px;
+	margin: 10px;
 	display: block;
 	padding: 5px;
+	/*width: 100%;*/
+	/*width: 500px;*/
 	background: #d9dabb;
 	border-radius: 5px;
 }
@@ -12,15 +14,18 @@ article > a {
 	padding: 10px;
 }
 
-article > img {
-	width: 10%;
+article > * {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+article img {
+	width: 150px;
+	/*display: none;*/
 	border-radius: 5px;
 }
 
-article > * {
-	display: inline;
-	vertical-align: middle;
-}
+
 
 
 
