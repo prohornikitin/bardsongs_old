@@ -8,7 +8,7 @@
                 	echo ' <img hidden class="news_image" alt="no image"	></img>';
                 }
                 echo ' <img hidden class="news_image" alt="image" src="', $news_item->img_url,  '"></img>';
-                echo ' <h4 hidden class="news_text">', $news_item->text, '</h4>';
+                echo ' <div hidden class="news_text">', $news_item->text, '</div>';
                 echo ' <button class="show_buttons">Показать</button>';
                 echo '</article>';
 	        }
