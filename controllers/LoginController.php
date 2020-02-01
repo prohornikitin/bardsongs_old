@@ -2,6 +2,7 @@
 require_once 'models/LoginData.php';
 require_once 'views/LoggedInForumView.php';
 require_once 'views/LoginView.php';
+require_once 'controllers/ControlPanelController.php';
 
 class LoginController
 {
@@ -84,7 +85,12 @@ class LoginController
 
     private function login()
     {
-        $this->view = new LoggedInForumView($this->login_data);
-        $this->view->generate();
+        if($_SERVER['REQUEST_URI'] == '/Forum.php') {
+            $this->view = new LoggedInForumView($this->login_data);
+            $this->view->generate();
+        } else if($_SERVER['REQUEST_URI'] == '/ControlPanel.php'){
+            $controller = new ControlPanelController();
+            $controller->doIndexAction();
+        }
     }
 }

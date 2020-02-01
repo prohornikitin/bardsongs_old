@@ -5,12 +5,12 @@
     	private mysqli $mysqli;
     	private array $news;
 
-    	public function __construct()
+    	function __construct()
     	{
     		$this->mysqli = new mysqli('localhost', 'website', '1', 'bardsongs');
     	}
 
-    	public function getMaxNewsId() : int
+    	private function getMaxNewsId() : int
 	    {
 	        $maxId = 0;
 	        $result = $this->mysqli->query('SELECT MAX(ID) FROM NEWS');
@@ -24,6 +24,37 @@
                 return 0;
             }
 	    }
+
+        public function addNewsItem($title, $image, $text) : bool
+        {   
+            
+            $image_url = $this->saveIfExist($image);
+            if($image_url !== null) {
+                $variables = '(title, text, img_url)';
+                $values = "('{$title}', '{$text}', '{$image_url}')";
+                $this->mysqli->query("INSERT INTO NEWS {$variables} VALUES {$values}");
+            } else {
+                $variables = '(title, text)';
+                $values = "('{$title}', '{$text}')";
+                $this->mysqli->query("INSERT INTO NEWS {$variables} VALUES {$values}");
+            }
+            return true;
+        }
+
+        private function saveIfExist($image)
+        {
+            $url = null;
+            echo '<h1>', $image['name'], '</h1>';
+            if($image['error'] == UPLOAD_ERR_OK) {
+                $url = "images/for_news/{$image['name']}";
+                if(!move_uploaded_file($image['tmp_name'], $url)) {
+                    unlink($url);
+                    move_uploaded_file($image['tmp_name'], $url);
+                }
+            }
+            return $url;
+        }
+
 
         private function loadData() : void
         {
@@ -50,7 +81,7 @@
 
 
 
-        public function __destruct()
+        function __destruct()
         {
         	$this->mysqli->close();
         }

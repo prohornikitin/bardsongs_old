@@ -5,8 +5,9 @@
 		} else {
 			echo '<h4>Войдите, чтобы получить возможность пользоваться форумом</h4>';
 		}
+	
+	echo '<form action="', $_SERVER['REQUEST_URI'],'" method="POST">'
 	?>
-	<form action="/Login.php" method="POST">
 		<div class="form_item">
 			<input type="email" required name="email" placeholder="Email">
 		</div>

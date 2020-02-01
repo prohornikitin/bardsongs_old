@@ -4,10 +4,11 @@
 	        foreach ($news as $news_item) {
                 echo '<article>';
                 echo ' <h3 class="news_headers">', $news_item->title, '</h3>';
-                if($news_item->img_url == null) {
-                	echo ' <img hidden class="news_image" alt="no image"	></img>';
+                if($news_item->img_url === null) {
+                	echo ' <img hidden class="news_image" alt="no image"></img>';
+                } else {
+                	echo ' <img hidden class="news_image" alt="image" src="', $news_item->img_url, '"></img>';
                 }
-                echo ' <img hidden class="news_image" alt="image" src="', $news_item->img_url,  '"></img>';
                 echo ' <div hidden class="news_text">', $news_item->text, '</div>';
                 echo ' <button class="show_buttons">Показать</button>';
                 echo '</article>';

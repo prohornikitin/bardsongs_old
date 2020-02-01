@@ -8,7 +8,6 @@ class LoginView implements IView
         ob_clean();
         $special_css = 'ControlPanel.css';
         $content_view = 'Login.php';
-        $disabledNavButtonId = 'forum';
         require 'views/PageTemplate.php';
     }
 
@@ -17,7 +16,6 @@ class LoginView implements IView
         ob_clean();
         $special_css = 'ControlPanel.css';
         $content_view = 'Login.php';
-        $disabledNavButtonId = 'forum';
         require 'views/PageTemplate.php';
     }
 

@@ -23,7 +23,6 @@
             <?php 
                 require "views/contents/{$content_view}";
             ?>
-            <h3 style='color: white;'>День Рождения клуба - 18 ноября 1964 года.</h3>
         </div>
     </body>
     <?php 
